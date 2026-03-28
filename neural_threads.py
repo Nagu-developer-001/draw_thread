@@ -155,7 +155,7 @@ def main():
 
     t0 = time.time()
     print(f"[Neural Threads]  {W}×{H}   Q = quit")
-    print("Show both hands — 5 threads connect finger to finger.")
+    print("Show Your hands — 5 threads connect finger to finger.")
 
     while True:
         ret, raw = cap.read()
@@ -214,7 +214,7 @@ def main():
 
             # ── Minimal HUD ────────────────────────────
             status = "both hands" if (tips_L and tips_R) else "show both hands..."
-            cv2.putText(frame, "NEURAL  THREADS",
+            cv2.putText(frame, "HAND GESTURES",
                         (14, 30), cv2.FONT_HERSHEY_SIMPLEX,
                         0.7, (140, 80, 200), 1, cv2.LINE_AA)
             cv2.putText(frame, status,
